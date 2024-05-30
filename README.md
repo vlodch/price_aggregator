@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Crypto aggregator
 
 ## Overview
@@ -147,3 +148,7 @@ Inspired by [Source/Resource]
 ## License
 
 This project is licensed under the [License Name] License.
+=======
+# price_aggregator
+crypto_trading_aggregator
+>>>>>>> origin/main
