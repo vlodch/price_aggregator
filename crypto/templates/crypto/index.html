@@ -1,0 +1,24 @@
+<!-- crypto/templates/crypto/index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Price Aggregator</title>
+    <style>
+        /* CSS styles remain unchanged */
+    </style>
+</head>
+<body>
+    <h1>Crypto Price Aggregator</h1>
+
+    <a href="{% url 'aggregated_data' %}">Aggregated Data</a>
+
+    <form method="post" action="{% url 'aggregated_data' %}">
+        {% csrf_token %}
+        <input type="number" name="amount" placeholder="Enter amount" required>
+        <input type="submit" value="Get Profit">
+    </form>
+</body>
+</html>

@@ -1,0 +1,5 @@
+# Ignore Docker-related files and directories
+.dockerignore
+.docker
+.dockerignore
+.git

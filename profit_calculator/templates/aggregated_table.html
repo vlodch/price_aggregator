@@ -1,0 +1,34 @@
+<!-- profit_calculator/templates/aggregated_data.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Aggregated Table</title>
+</head>
+<body>
+    <h1>Aggregated Table</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Buy Platform</th>
+                <th>Sell Platform</th>
+                <th>Total Profit</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Kraken</td>
+                <td>CryptoCompare</td>
+                <td>{{ calculate_profit('Kraken', 'CryptoCompare') }}</td>
+            </tr>
+            <tr>
+                <td>Coinbase</td>
+                <td>Bitstamp</td>
+                <td>{{ calculate_profit('Coinbase', 'Bitstamp') }}</td>
+            </tr>
+            <!-- Add more rows as needed for other platform combinations -->
+        </tbody>
+    </table>
+</body>
+</html>

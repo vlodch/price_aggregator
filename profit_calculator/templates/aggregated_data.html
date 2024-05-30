@@ -1,0 +1,33 @@
+<!-- crypto/templates/crypto/aggregated_data.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Aggregated Data</title>
+</head>
+<body>
+    <h1>Aggregated Data</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Buy Platform</th>
+                <th>Sell Platform</th>
+                <th>Total Profit</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Kraken</td>
+                <td>CryptoCompare</td>
+                <td>{{ aggregated_data.Kraken_CryptoCompare }}</td>
+            </tr>
+            <tr>
+                <td>Coinbase</td>
+                <td>Bitstamp</td>
+                <td>{{ aggregated_data.Coinbase_Bitstamp }}</td>
+            </tr>
+            <!-- Add more rows as needed for other platform combinations -->
+        </tbody>
+    </table>
+</body>
+</html>

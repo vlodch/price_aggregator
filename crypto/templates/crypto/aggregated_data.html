@@ -1,0 +1,43 @@
+<!-- crypto/templates/crypto/aggregated_data.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Aggregated Currency Data</title>
+</head>
+<body>
+    <h1>Aggregated Currency Data</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="amount">Enter value: </label>
+        <input type="text" id="amount" name="amount" value="{{ amount|default_if_none:'1' }}">
+        <button type="submit">Submit</button>
+    </form>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Currency</th>
+                <th>Coinbase Price</th>
+                <th>Bitstamp Price</th>
+                <th>Binance Price</th>
+                <th>Best Buy Platform</th>
+                <th>Best Sell Platform</th>
+                <th>Max Profit</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for data in aggregated_data %}
+            <tr>
+                <td>{{ data.symbol }}</td>
+                <td>{{ data.coinbase_price }}</td>
+                <td>{{ data.bitstamp_price }}</td>
+                <td>{{ data.binance_price }}</td>
+                <td>{{ data.best_buy_platform }}</td>
+                <td>{{ data.best_sell_platform }}</td>
+                <td>{{ data.max_profit }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

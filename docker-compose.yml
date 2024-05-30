@@ -1,0 +1,29 @@
+version: '3'
+
+services:
+  db:
+    image: postgres:12
+    environment:
+      POSTGRES_DB: crypto_db
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+    ports:
+      - "5432:5432"
+
+  web:
+    build: .
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    environment:
+      DJANGO_SETTINGS_MODULE: crypto.settings
+
+      # Remove these environment variables as they should be configured within Django settings.py
+      # DATABASE_NAME: crypto_db
+      # DATABASE_USER: user
+      # DATABASE_PASSWORD: password
+      # DATABASE_HOST: db
+      # DATABASE_PORT: 5432
