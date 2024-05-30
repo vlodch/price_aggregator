@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Crypto aggregator
 
 ## Overview
@@ -92,63 +91,36 @@ def fetch_prices(symbol):
     # Implementation to fetch cryptocurrency prices from different platforms
     pass
 ```
+# Calculating Profit
 
-### Calculating Profit
-
-```python
 # crypto/views.py
-
+```python
 def calculate_profit(request, symbol, amount):
     # Implementation to calculate potential profits for different platform combinations
     pass
 ```
+# Aggregated Data View
 
-### Aggregated Data View
-
-```python
 # crypto/views.py
-
+```python
 def aggregated_data_view(request):
     # Implementation to display aggregated cryptocurrency data with the best deals
     pass
 ```
-
-## Testing
-
-Run unit tests:
-
-```bash
+# Testing
+```shell
 python manage.py test
 ```
-
-Ensure all tests pass before deploying the application.
-
-## Deployment
-
+# Deployment
 Build Docker images:
-
-```bash
+```shell
 docker-compose build
+
 ```
-
-Start Docker containers:
-
-```bash
+## Start Docker containers:
+```shell
 docker-compose up
+
 ```
-
-Access the deployed application in your web browser at [http://localhost:8000](http://localhost:8000).
-
-## Credits
-
-Developed by [Your Name]
-
-Inspired by [Source/Resource]
-
-## License
-
-This project is licensed under the [License Name] License.
-=======
-# price_aggregator
-crypto_trading_aggregator
->>>>>>> origin/main
+# Credits
+Developed by Vlod Ch
